@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Net.Http.Headers;
 
-namespace ConektaXamarin {
+namespace Conekta {
 
 	public class Connection {
 
@@ -32,7 +32,7 @@ namespace ConektaXamarin {
 
 			if(Platform == "Android")
 				requestMessage.Headers.Add ("Conekta-Client-User-Agent", @"{""agent"": ""Conekta Android SDK""}");
-			else if(Platform == "IOS")
+			else if(Platform == "iOS")
 				requestMessage.Headers.Add ("Conekta-Client-User-Agent", @"{""agent"": ""Conekta iOS SDK""}");
 
 			requestMessage.Content =

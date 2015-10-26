@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConektaXamarin {
+namespace Conekta {
 
 	public class Card {
 

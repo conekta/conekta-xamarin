@@ -11,7 +11,7 @@ using SharpSwift;
 using Android;
 #endif
 
-namespace ConektaXamarin {
+namespace Conekta {
 
 	public abstract class Conekta {
 
