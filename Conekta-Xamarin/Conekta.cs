@@ -20,7 +20,7 @@ namespace ConektaXamarin {
 		public static string PublicKey { get; set; }
 
 		public static string DeviceFingerPrint() {
-			string uuidString;
+			string uuidString = "";
 
 			#if __IOS__
 				NSUuid uuid = new NSUuid();
