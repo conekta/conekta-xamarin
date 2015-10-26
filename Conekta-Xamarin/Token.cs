@@ -15,7 +15,7 @@ namespace ConektaXamarin {
 			Connection conn = new Connection ("IOS");
 			string responseString = await conn.request (card, EndPoint);
 			JObject result = JObject.Parse (responseString);
-			Conekta.DeviceFingerPrint ();
+			System.Console.WriteLine(Conekta.DeviceFingerPrint ());
 
 			return result;
 		}

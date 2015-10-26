@@ -30,7 +30,6 @@ namespace ConektaXamarin {
 			#if __ANDROID__
 			System.Console.WriteLine("=== ANDROID ===");
 			//System.Console.WriteLine(Java.Util.UUID);
-			//int josue = Java.Util.UUID;
 			#endif
 			return uuidString;
 		}
