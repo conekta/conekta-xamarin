@@ -48,5 +48,11 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>packages\Newtonsoft.Json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="SharpSwift.Attributes">
+      <HintPath>packages\SharpSwift.Attributes.1.1.0\lib\SharpSwift.Attributes.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectiveC">
+      <HintPath>packages\CocoaSharp.ObjectiveC.1.0.0\lib\ObjectiveC.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

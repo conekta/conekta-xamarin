@@ -8,10 +8,10 @@ namespace ConektaXamarin {
 
 	public class Connection {
 
-		public RuntimePlatform Platform { get; set; }
+		public string Platform { get; set; }
 
-		public Connection (RuntimePlatform platform) {
-			this.Platform = platform;
+		public Connection (string platform) {
+			Platform = platform;
 		}
 
 		public async Task<string> request(Card card, string EndPoint) {
@@ -28,11 +28,11 @@ namespace ConektaXamarin {
 			HttpRequestMessage requestMessage = new HttpRequestMessage (HttpMethod.Post, Conekta.BaseUri + EndPoint);
 
 			requestMessage.Headers.Authorization = new AuthenticationHeaderValue ("Basic", Convert.ToBase64String(Encoding.UTF8.GetBytes(string.Format("{0}:", Conekta.PublicKey))));
-			//requestMessage.Headers.Add ("", "application/vnd.conekta-v" + Conekta.ApiVersion + "+json");
+			requestMessage.Headers.Add ("Acept", "application/vnd.conekta-v" + Conekta.ApiVersion + "+json");
 
-			if(Platform == RuntimePlatform.Android)
+			if(Platform == "Android")
 				requestMessage.Headers.Add ("Conekta-Client-User-Agent", @"{""agent"": ""Conekta Android SDK""}");
-			else if(Platform == RuntimePlatform.iOS)
+			else if(Platform == "IOS")
 				requestMessage.Headers.Add ("Conekta-Client-User-Agent", @"{""agent"": ""Conekta iOS SDK""}");
 
 			requestMessage.Content =

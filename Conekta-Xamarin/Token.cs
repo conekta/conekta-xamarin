@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Diagnostics;
 
 namespace ConektaXamarin {
 
@@ -10,12 +11,13 @@ namespace ConektaXamarin {
 		public Token() {
 		}
 
-		public async Task<string> Create(Card card) {
-			Connection conn = new Connection (RuntimePlatform.Android);
+		public async Task<JObject> Create(Card card) {
+			Connection conn = new Connection ("IOS");
 			string responseString = await conn.request (card, EndPoint);
-			return responseString;
-			//var token = Newtonsoft.Json.Linq.JObject.Parse (responseString);
-			//return token;
+			JObject result = JObject.Parse (responseString);
+			Conekta.DeviceFingerPrint ();
+
+			return result;
 		}
 	}
 }
