@@ -23,14 +23,15 @@ namespace ConektaXamarin {
 			string uuidString = "";
 
 			#if __IOS__
-				NSUuid uuid = new NSUuid();
-				uuidString = uuid.AsString();
+				//NSUuid uuid = new NSUuid();
+				//uuidString = uuid.AsString();
+				uuidString = UIKit.UIDevice.CurrentDevice.IdentifierForVendor.AsString();
+			#elif __ANDROID__
+				uuidString = Android.OS.Build.Serial;
+			#elif WINDOWS_PHONE
+				uuidString = Windows.Phone.System.Analytics.HostInformation.PublisherHostId;
 			#endif
 
-			#if __ANDROID__
-			System.Console.WriteLine("=== ANDROID ===");
-			//System.Console.WriteLine(Java.Util.UUID);
-			#endif
 			return uuidString;
 		}
 	}
