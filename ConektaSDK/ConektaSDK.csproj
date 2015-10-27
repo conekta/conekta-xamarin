@@ -39,7 +39,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
-    <None Include="conekta.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

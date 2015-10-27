@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conekta", "Conekta.csproj", "{54BC5F28-FF4C-4658-9983-4FF0D5B4CA85}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConektaSDK", "ConektaSDK.csproj", "{54BC5F28-FF4C-4658-9983-4FF0D5B4CA85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -173,6 +173,7 @@ Global
 		$31.NamingStyle = PascalCase
 		$31.IncludeInstanceMembers = True
 		$31.IncludeStaticEntities = True
-		description = Conekta PCL for Xamarin
+		$0.VersionControlPolicy = $33
+		$33.inheritsSet = Mono
 	EndGlobalSection
 EndGlobal
