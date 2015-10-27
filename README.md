@@ -41,7 +41,7 @@ If you are compiling with iOS 9, please add on your application plist the lines 
     </dict>
   </dict>
   <dict>
-    <key>amazon.com</key>
+    <key>conektaapi.s3.amazonaws.com</key>
     <dict>
       <key>NSIncludesSubdomains</key>
       <true/>                
