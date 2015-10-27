@@ -23,6 +23,12 @@ $ git clone git@github.com:conekta/conekta-xamarin.git
 
 3. Use package with namespace **ConektaSDK**
 
+4. Set the references: **System.Net**, **System.Net.Http***
+
+5. Instal packages: **Json.NET**
+
+6. In case you are using iOS, install package: **CocoaSharp.ObjectiveC**
+
 ### App Transport Security
 
 If you are compiling with iOS 9, please add on your application plist the lines below:
