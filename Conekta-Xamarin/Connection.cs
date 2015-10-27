@@ -37,9 +37,8 @@ namespace ConektaSDK {
 
 			requestMessage.Content =
 				new StringContent (string.Format (
-					@"{{""card"":{{""name"":""{0}"",""number"":{1},""cvc"":{2},""exp_month"":{3},""exp_year"":{4}}}}}", card.name,
-					card.number, card.cvc, card.expiry.Month, card.expiry.Year), Encoding.UTF8, "application/json");
-
+					@"{{""card"":{{""name"":""{0}"",""number"":""{1}"",""cvc"":""{2}"",""exp_month"":""{3}"",""exp_year"":""{4}""}}}}", card.name,
+					card.number, card.cvc, card.exp_month, card.exp_year), Encoding.UTF8, "application/json");
 
 			HttpResponseMessage response = await client.SendAsync (requestMessage); //.ConfigureAwait(false);
 

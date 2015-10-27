@@ -22,9 +22,6 @@ namespace ConektaSDK {
 			Connection conn = new Connection (platform);
 			string responseString = await conn.request (card, EndPoint);
 			JObject result = JObject.Parse (responseString);
-			string uuid = Conekta.DeviceFingerPrint ();
-			System.Console.WriteLine ("EL UUID:::::");
-			System.Console.WriteLine (uuid);
 			return result;
 		}
 	}
