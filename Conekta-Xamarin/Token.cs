@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
 
-namespace Conekta {
+namespace ConektaSDK {
 
 	public class Token {
 		public const string EndPoint = "/tokens";

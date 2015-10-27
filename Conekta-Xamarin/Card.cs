@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Conekta {
+namespace ConektaSDK {
 
 	public class Card {
 

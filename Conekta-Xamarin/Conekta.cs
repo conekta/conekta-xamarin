@@ -13,7 +13,7 @@ using UIKit;
 using Android;
 #endif
 
-namespace Conekta {
+namespace ConektaSDK {
 
 	public abstract class Conekta {
 

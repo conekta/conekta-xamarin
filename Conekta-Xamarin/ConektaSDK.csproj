@@ -6,8 +6,8 @@
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{54BC5F28-FF4C-4658-9983-4FF0D5B4CA85}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Conekta</RootNamespace>
-    <AssemblyName>Conekta</AssemblyName>
+    <RootNamespace>ConektaSDK</RootNamespace>
+    <AssemblyName>ConektaSDK</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
     <ProductVersion>8.0.30703</ProductVersion>

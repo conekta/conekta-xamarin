@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Net.Http.Headers;
 
-namespace Conekta {
+namespace ConektaSDK {
 
 	public class Connection {
 
