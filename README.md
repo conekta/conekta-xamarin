@@ -35,7 +35,7 @@ If you are compiling with iOS 9, please add on your application plist the lines 
     <key>conekta.io</key>
     <dict>
       <key>NSIncludesSubdomains</key>
-      <true/>                
+      <true/>
       <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
       <false/>
     </dict>
@@ -44,7 +44,7 @@ If you are compiling with iOS 9, please add on your application plist the lines 
     <key>conektaapi.s3.amazonaws.com</key>
     <dict>
       <key>NSIncludesSubdomains</key>
-      <true/>                
+      <true/>
       <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
       <false/>
     </dict>
