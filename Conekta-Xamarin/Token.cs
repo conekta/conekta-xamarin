@@ -25,7 +25,6 @@ namespace Conekta {
 			string uuid = Conekta.DeviceFingerPrint ();
 			System.Console.WriteLine ("EL UUID:::::");
 			System.Console.WriteLine (uuid);
-
 			return result;
 		}
 	}
