@@ -30,25 +30,7 @@ If you are compiling with iOS 9, please add on your application plist the lines 
 ```xml
 <key>NSAppTransportSecurity</key>
 <dict>
-  <key>NSExceptionDomains</key>
-  <dict>
-    <key>conekta.io</key>
-    <dict>
-      <key>NSIncludesSubdomains</key>
-      <true/>
-      <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-      <false/>
-    </dict>
-  </dict>
-  <dict>
-    <key>conektaapi.s3.amazonaws.com</key>
-    <dict>
-      <key>NSIncludesSubdomains</key>
-      <true/>
-      <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
-      <false/>
-    </dict>
-  </dict>
+  <key>NSAllowsArbitraryLoads</key><true/>
 </dict>
 ```
 
