@@ -28,9 +28,6 @@ namespace ConektaSDK {
 			string SessionId = Conekta.DeviceFingerPrint ();
 			string PublicKey = Conekta.PublicKey;
 
-			System.Console.WriteLine (SessionId);
-			System.Console.WriteLine (PublicKey);
-
 			string html = "<html style=\"background: blue;\"><head></head><body>";
 			html += "<script type=\"text/javascript\" src=\"https://conektaapi.s3.amazonaws.com/v0.3.2/js/conekta.js\" data-public-key=\"" + PublicKey + "\" data-session-id=\"" + SessionId + "\"></script>";
 			html += "</body></html>";
