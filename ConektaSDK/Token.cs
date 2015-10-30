@@ -19,8 +19,12 @@ namespace ConektaSDK {
 				platform = "Android";
 			#endif
 
+			string Content = string.Format (
+				                 @"{{""card"":{{""name"":""{0}"",""number"":""{1}"",""cvc"":""{2}"",""exp_month"":""{3}"",""exp_year"":""{4}"", ""device_fingerprint"":""{5}""}}}}",
+				card.name, card.number, card.cvc, card.exp_month, card.exp_year, Conekta.DeviceFingerPrint());
+
 			Connection conn = new Connection (platform);
-			string responseString = await conn.request (card, EndPoint);
+			string responseString = await conn.request (Content, EndPoint);
 			JObject result = JObject.Parse (responseString);
 			return result;
 		}
