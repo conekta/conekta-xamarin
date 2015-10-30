@@ -29,7 +29,7 @@ namespace ConektaSDK {
 			string PublicKey = Conekta.PublicKey;
 
 			string html = "<html style=\"background: blue;\"><head></head><body>";
-			html += "<script type=\"text/javascript\" src=\"https://conektaapi.s3.amazonaws.com/v0.5.0/js/conekta.js\" data-public-key=\"" + PublicKey + "\" data-session-id=\"" + SessionId + "\"></script>";
+			html += "<script type=\"text/javascript\" src=\"https://conektaapi.s3.amazonaws.com/v0.5.0/js/conekta.js\" data-conekta-public-key=\"" + PublicKey + "\" data-conekta-session-id=\"" + SessionId + "\"></script>";
 			html += "</body></html>";
 
 			string contentPath = Environment.CurrentDirectory;
