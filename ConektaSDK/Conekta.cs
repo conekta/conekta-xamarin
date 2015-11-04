@@ -7,6 +7,7 @@ using Foundation;
 using ObjectiveC;
 using ObjCRuntime;
 using UIKit;
+using System.IO;
 #endif
 
 #if __ANDROID__
@@ -29,7 +30,6 @@ namespace ConektaSDK {
 		public static void collectDevice() {
 			string SessionId = Conekta.DeviceFingerPrint ();
 			string PublicKey = Conekta.PublicKey;
-
 			string html = "<!DOCTYPE html><html><head></head><body style=\"background: blue;\">";
 			html += "<script type=\"text/javascript\" src=\"https://conektaapi.s3.amazonaws.com/v0.5.0/js/conekta.js\" data-conekta-public-key=\"" + PublicKey + "\" data-conekta-session-id=\"" + SessionId + "\"></script>";
 			html += "</body></html>";
@@ -37,12 +37,10 @@ namespace ConektaSDK {
 			string contentPath = Environment.CurrentDirectory;
 
 			#if __IOS__
-			System.Console.WriteLine("Se va agregar webview en iOS");
 			UIWebView web = new UIWebView(new RectangleF(new PointF(0,0), new SizeF(0, 0)));
-			web.LoadHtmlString(html, new NSUrl(contentPath, true));
 			web.ScalesPageToFit = true;
+			web.LoadHtmlString(html, new NSUrl("https://conektaapi.s3.amazonaws.com/v0.5.0/js/conekta.js"));
 			Conekta._delegate.View.AddSubview(web);
-			System.Console.WriteLine("Se agrego webview en iOS");
 			#endif
 
 			#if __ANDROID__
