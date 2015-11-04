@@ -7,10 +7,11 @@ using Foundation;
 using ObjectiveC;
 using ObjCRuntime;
 using UIKit;
+using System.IO;
 #endif
 
 #if __ANDROID__
-using Android;
+using Android.Webkit;
 #endif
 
 namespace ConektaSDK {
@@ -20,6 +21,8 @@ namespace ConektaSDK {
 		public static string ApiVersion { get; set; }
 		public const string BaseUri = "https://api.conekta.io";
 		public static string PublicKey { get; set; }
+		private static string UriConektaJs = "https://conektaapi.s3.amazonaws.com/v0.3.2/js/conekta.js";
+
 		#if __IOS__
 		public static UIViewController _delegate { get; set; }
 		#endif
@@ -27,8 +30,7 @@ namespace ConektaSDK {
 		public static void collectDevice() {
 			string SessionId = Conekta.DeviceFingerPrint ();
 			string PublicKey = Conekta.PublicKey;
-
-			string html = "<html style=\"background: blue;\"><head></head><body>";
+			string html = "<!DOCTYPE html><html><head></head><body style=\"background: blue;\">";
 			html += "<script type=\"text/javascript\" src=\"https://conektaapi.s3.amazonaws.com/v0.5.0/js/conekta.js\" data-conekta-public-key=\"" + PublicKey + "\" data-conekta-session-id=\"" + SessionId + "\"></script>";
 			html += "</body></html>";
 
@@ -36,13 +38,17 @@ namespace ConektaSDK {
 
 			#if __IOS__
 			UIWebView web = new UIWebView(new RectangleF(new PointF(0,0), new SizeF(0, 0)));
-			web.LoadHtmlString(html, new NSUrl(contentPath, true));
 			web.ScalesPageToFit = true;
+			web.LoadHtmlString(html, new NSUrl("https://conektaapi.s3.amazonaws.com/v0.5.0/js/conekta.js"));
 			Conekta._delegate.View.AddSubview(web);
 			#endif
 
 			#if __ANDROID__
-
+			WebView web_view = new WebView(Android.App.Application.Context);
+			web_view.Settings.JavaScriptEnabled = true;
+			web_view.Settings.AllowContentAccess = true;
+			web_view.Settings.DomStorageEnabled = true;
+			web_view.LoadDataWithBaseURL(Conekta.UriConektaJs, html, "text/html", "UTF-8", null);
 			#endif
 		}
 
