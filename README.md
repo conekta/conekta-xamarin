@@ -1,3 +1,5 @@
+![alt tag](https://raw.github.com/conekta/conekta-xamarin/master/readme_files/cover.png)
+
 Conekta Xamarin v 0.0.1
 ======================
 
