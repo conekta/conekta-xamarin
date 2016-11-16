@@ -26,7 +26,7 @@ namespace ConektaSDK {
 			HttpRequestMessage requestMessage = new HttpRequestMessage (HttpMethod.Post, Conekta.BaseUri + EndPoint);
 
 			requestMessage.Headers.Authorization = new AuthenticationHeaderValue ("Basic", Convert.ToBase64String(Encoding.UTF8.GetBytes(string.Format("{0}:", Conekta.PublicKey))));
-			requestMessage.Headers.Add ("Acept", "application/vnd.conekta-v" + Conekta.ApiVersion + "+json");
+			requestMessage.Headers.Add ("Accept", "application/vnd.conekta-v" + Conekta.ApiVersion + "+json");
 
 			if(Platform == "Android")
 				requestMessage.Headers.Add ("Conekta-Client-User-Agent", @"{""agent"": ""Conekta Android SDK""}");
