@@ -1,4 +1,4 @@
-![alt tag](https://raw.github.com/conekta/conekta-xamarin/master/readme_files/cover.png)
+![README Cover Image](readme_cover.png)
 
 Conekta Xamarin v 0.0.1
 ======================
@@ -70,12 +70,12 @@ $ cd conekta-xamarin
 
 We love pull requests, send them from your fork to branch **dev** into **conekta/conekta-xamarin**
 
-License
--------
-Developed by [Conekta](https://www.conekta.io). Available with [MIT License](LICENSE).
+## License
 
-We are hiring
--------------
+Developed in Mexico by [Conekta](https://www.conekta.com) in. Available with [MIT License](LICENSE).
 
-If you are a comfortable working with a range of backend languages (Java, Python, Ruby, PHP, etc) and frameworks, you have solid foundation in data structures, algorithms and software design with strong analytical and debugging skills. 
-Send your CV, github to quieroser@conekta.io
+***
+
+## We are always hiring!
+
+If you are a comfortable working with a range of backend languages (Java, Python, Ruby, PHP, etc) and frameworks, you have solid foundation in data structures, algorithms and software design with strong analytical and debugging skills. Send us your CV and GitHub to quieroser@conekta.com
